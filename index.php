@@ -30,7 +30,7 @@ if(isset($_GET['action'])){
     }
 }
 else{
-    adminHomePage();
+    require_once 'view/home.php';
 }
 
 ?>
