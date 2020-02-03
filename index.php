@@ -8,8 +8,6 @@ require "controler/drugControler.php";
 if(isset($_GET['action'])){
     $action = $_GET['action'];
 
-// Test Push David
-
     switch ($action)
     {
         case 'admin':
@@ -30,7 +28,7 @@ if(isset($_GET['action'])){
     }
 }
 else{
-    adminHomePage();
+    require_once 'view/home.php';
 }
 
 ?>
