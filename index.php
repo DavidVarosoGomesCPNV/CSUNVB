@@ -7,7 +7,7 @@ require "controler/drugControler.php";
 
 $action = $_GET['action'];
 
-// Test Push David
+// Test Push David 2
 
 switch ($action)
 {
