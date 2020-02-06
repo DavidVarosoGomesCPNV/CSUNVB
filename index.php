@@ -8,6 +8,7 @@ require "controler/drugControler.php";
 $action = $_GET['action'];
 
 // Test Push David
+// Test Push Almir
 
 switch ($action)
 {
