@@ -1,35 +1,24 @@
 <?php
 /**
- * Ce cartouche vaudra quelques points en moins au groupe qui osera le laisser là tel quel ...
- * Auteur: X. Carrel
+ * Auteur: Valentin Zingg
  * Date: Février 2020
  **/
 
-/**
- * Retourne tous les items dans un tableau indexé de tableaux associatifs
- * Des points seront également retirés au groupe qui osera laisser une des fonctions de ce fichier telle quelle
- * sans l'adapter au niveau de son nom et de son code pour qu'elle dise plus précisément de quelles données elle traite
- */
 function readTodoListItems()
 {
-    return json_decode(file_get_contents("model/dataStorage/items.json"),true);
+    $data = file_get_contents("model/dataStorage/todos.json");
+    $vraijson = json_decode($data,true);
+    return $vraijson;
 }
 
-/**
- * Retourne un item précis, identifié par son id
- * ...
- */
-function readTodoListItem($id)
+
+function searchTodoListItems($id)
 {
-    $items = getTodoListItems();
+    $items = readTodoListItems();
     // TODO: coder la recherche de l'item demandé
-    return $item;
+    return $items;
 }
 
-/**
- * Sauve l'ensemble des items dans le fichier json
- * ...
- */
 function updateTodoListItems($items)
 {
     file_put_contents("model/dataStorage/items.json",json_encode($items));

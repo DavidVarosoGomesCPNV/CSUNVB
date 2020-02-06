@@ -7,3 +7,8 @@
     background-color: aliceblue;
     font-size: xx-large;
 }
+
+.tache{
+    border:1px black solid;
+    padding:2% 2%;
+}
