@@ -21,6 +21,8 @@ $title = "CSU-NVB - Tâches hebdomadaires";
             echo("<div class='tache'>");
             echo("<h2>".$truc["description"]."</h2>");
             echo("Base : ".$truc["base"]."<br>");
+
+            //Job de nuit
             if($truc["nightjob"] != 0)
             {
                 echo("Job de nuit : Oui"."<br>");
@@ -30,7 +32,17 @@ $title = "CSU-NVB - Tâches hebdomadaires";
                 echo("Job de nuit : Non"."<br>");
             }
             echo("Date : ".$truc["date"]."<br>");
-            echo("Date : ".$truc["id"]."<br>");
+
+            //acquittance
+            if($truc["acknowledged_by"] != null)
+            {
+                echo("Acquitté à : ".$truc["acknowledged_by"]."<br>");
+            }
+            else
+            {
+                echo("Acquitté à : Personne"."<br>");
+            }
+            //TODO: Type et value /!\
             echo("<a class='btn btn-primary'>Voir tâche</a>");
             echo("</div>");
         }
