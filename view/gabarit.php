@@ -1,4 +1,9 @@
 ﻿<!DOCTYPE HTML>
+<!--
+ * Ver. 1.0
+ * Auteurs: Valentin Zingg & Gwenael West
+ * Date: Février 2020 -->
+
 <html lang="fr">
 <head>
     <meta charset="utf-8">

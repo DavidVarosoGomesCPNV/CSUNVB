@@ -1,4 +1,10 @@
 <?php
+/**
+ * Ver. 1.0
+ * Auteurs: Valentin Zingg & Gwenael West
+ * Date: Février 2020
+ **/
+
 // Include all controllers
 require "controler/adminControler.php";
 require "controler/shiftEndControler.php";
