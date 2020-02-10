@@ -1,7 +1,7 @@
 <?php
 /**
- * Ce cartouche vaudra quelques points en moins au groupe qui osera le laisser là tel quel ...
- * Auteur: X. Carrel
+ * Ver. 1.0
+ * Auteurs: Valentin Zingg & Gwenael West
  * Date: Février 2020
  **/
 
