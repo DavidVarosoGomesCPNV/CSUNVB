@@ -22,11 +22,15 @@ $title = "CSU-NVB - Tâches hebdomadaires";
         <a class='btn btn-primary'>Modifier liste</a>
     </div>
     <div class="row col-m">
+
         <?php
+
         $tododata = readTodoListItems();
+        echo("<table>");
         foreach($tododata as $truc)
         {
-            echo("<table><br>");
+
+            echo("<br>");
             echo("<tr><h2>".$truc["description"]."</h2><br>");
             echo("<th><strong>"."ID : ".$truc["id"]."</strong>"."<br></th>");
             echo("<th>Base : ".$truc["base"]."</th><br>");
@@ -42,10 +46,11 @@ $title = "CSU-NVB - Tâches hebdomadaires";
             }
             echo("<br><th> Date : ".$truc["date"]."<br></th>");
 
-            echo("<br></tr></table><br>");
+            echo("<br></tr><br>");
             echo("<hr>");
         }
         ?>
+        </table>
     </div>
 </div>
 
