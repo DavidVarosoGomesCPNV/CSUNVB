@@ -22,7 +22,7 @@
     <link href="http://fonts.googleapis.com/css?family=Pontano+Sans" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" type="text/css">
     <script src="view/contents/js/jquery-3.4.1.min.js"></script>
-
+    <link href="view/contents/css/shiftEnd.css" rel="stylesheet">
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
     <!-- Javascript de l'application -->
@@ -31,14 +31,19 @@
     <script src="view/contents/js/shiftEnd.js"></script>
     <script src="view/contents/js/stups.js"></script>
     <script src="view/contents/js/todoList.js"></script>
-
+    <script src="view/contents/js/shiftEnd.js"></script>
 </head>
 <body>
 
 <div class="container">
 
     <header>
+        <div class="row banner" >
 
+
+        <div class="row banner">
+            <img class="col-2" src="view/contents/assets/images/logo.png">
+            <a href="../index.php" class="col-10 text-center mt-5 text-decoration-none"><h1>CSU-NVB</h1></a>
             <a href="?action=login" class="btn btn-primary m-1 pull-right">Login</a>
         </div>
     </header>
@@ -46,6 +51,7 @@
     <div>
         <?= $content; ?>
     </div>
+</div>
 
 </body>
 </html>
