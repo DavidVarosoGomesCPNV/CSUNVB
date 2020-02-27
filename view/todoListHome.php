@@ -10,9 +10,8 @@ $title = "CSU-NVB - Tâches hebdomadaires";
     </div>
     <hr>
     <div class="row m-2">
-        <h2>Tâches</h2>
+        <h2>Toutes les Tâches</h2>
     </div>
-    <hr>
     <div class="row col-m">
         <?php
         $tododata = readTodoListItems();
@@ -20,6 +19,7 @@ $title = "CSU-NVB - Tâches hebdomadaires";
         {
             echo("<div class='tache'>");
             echo("<h2>".$truc["description"]."</h2>");
+            echo("<strong>"."ID : ".$truc["id"]."</strong>"."<br>");
             echo("Base : ".$truc["base"]."<br>");
 
             //Job de nuit
