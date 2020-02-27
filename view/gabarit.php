@@ -38,9 +38,9 @@
 <div class="container">
 
     <header>
-        <div class="row banner">
-            <img class="col-2" src="/assets/images/logo.png">
-            <a href="../index.php" class="col-10 text-center mt-5 text-decoration-none"><h1>CSU-NVB</h1></a>
+        <div class="row banner" >
+            <img class="col-3" src="/assets/images/logo.png">
+            <a href="../index.php" class="col-9 text-center mt-5 text-decoration-none"><h1>CSU-NVB</h1></a>
             <a href="?action=login" class="btn btn-primary m-1 pull-right">Login</a>
         </div>
     </header>

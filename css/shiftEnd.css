@@ -1,0 +1,92 @@
+#ShiftEndAdd {
+    background-color: rgba(0, 138, 226, 0.33);
+    padding: 10px;
+    display: none;
+}
+
+#shiftEndAddBottom{
+    margin: -10px;
+    padding: 10px;
+    background-color: rgba(0, 48, 87, 0.33);
+}
+
+.colorButton {
+
+    background-color: #95d3f1;
+    margin-left: 5px;
+}
+
+.colorButton:hover{
+    background-color: #88c1dc;
+}
+
+.borderBot{
+
+    border-bottom: black 1px solid;
+}
+.borderLeft{
+
+    border-left: black 1px solid;
+}
+.borderRight{
+
+    border-right: black 1px solid;
+}
+
+#first{
+    text-align: right;
+}
+
+.info{
+    max-width: 100%;
+    min-width: 100%;
+}
+
+#tableMaterielTelecom{
+    text-align: center;
+    display: none;
+}
+
+#tableVehiculeIntervention{
+    display: none;
+    text-align: center;
+}
+
+#tableEcranDeCom{
+    display: none;
+    text-align: center;
+}
+
+#tableCentraleTache{
+    display: none;
+    text-align: center;
+}
+
+.titleTable{
+    font-size: 20px;
+}
+
+.radioYN{
+    height: 20px;
+    color: black;
+}
+
+.note{
+    margin-top: 5px;
+    max-height: 50px;
+    min-height: 50px;
+    font-size: 12px;
+    width: 100%;
+    background-color: #779bce;
+    border: 2px solid white;
+    color: white;
+    outline: none;
+}
+
+#prev:disabled, #next:disabled{
+    background-color: #4b4b4b;
+}
+
+#finish{
+    float: right;
+}

@@ -15,7 +15,7 @@ if(isset($_GET['action'])){
         case 'admin':
             adminHomePage();
             break;
-        case 'shiftend':
+        case 'shiftendHome':
             shiftEndHomePage();
             break;
         case 'todolist':
@@ -23,6 +23,9 @@ if(isset($_GET['action'])){
             break;
         case 'drugs':
             drugHomePage();
+            break;
+        case 'addRemise':
+            addRemise();
             break;
         default: // unknown action
             require_once 'view/home.php';
