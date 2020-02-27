@@ -6,104 +6,105 @@ $title = "CSU-NVB - Stupéfiants";
 <html lang="fr">
 <head>
     <title><?= $title; ?></title>
-    <style>
-
-        .rotate{
-            -ms-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-        }
-
-
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        th, td {
-            text-align: left;
-            padding: 5px;
-            width:30%;
-        }
-
-        .chiffre{
-            width: 55%;
-        }
-
-        tr:nth-child(even) {background-color: #f2f2f2;}
-    </style>
 </head>
-<body>
+<style>
+    table, th, td {
+        border: 1px solid black;
+        padding: 20px;
+    }
 
-<h2>Stupéfiants - Semaine <?php /*$NoSemaine*/ ?></h2>
 
-
-<div style="overflow-x:auto;">
+</style>
+<h1>Stupéfiants - Semaine X</h1>
+<form method="POST">
     <table>
         <tr>
+            <th>...</th>
+            <th colspan="4"><?php echo date("d.m") ?></th>
+        </tr>
+        <tr>
             <th>Morphine N°</th>
-            <th>Pharma</th>
-            <th><?php echo date("l d F Y")?></th>
-            <th>Points</th>
-            <th>Points</th>
-            <th>Points</th>
-            <th>Points</th>
-            <th>Points</th>
-            <th>Points</th>
-            <th>Points</th>
-            <th>Points</th>
-            <th>Points</th>
-            <th>Points</th>
+            <td>Pharmacie</td>
+            <td>Ambulance 1</td>
+            <td>Ambulance 2</td>
+            <td>Pharmacie</td>
         </tr>
         <tr>
-            <td><label><input class="chiffre" type="number"></td>
-            <td><label><input class="chiffre" type="number"></td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
         </tr>
         <tr>
-            <td><label><input class="chiffre" type="number"></td>
-            <td><label><input class="chiffre" type="number"></td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
         </tr>
         <tr>
-            <td><label><input class="chiffre" type="number"></td></td>
-            <td><label><input class="chiffre" type="number"></td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
         </tr>
         <tr>
-            <th>Fentanyl N°</th>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
         </tr>
-    </table>
-</div>
 
-</body>
-</html>
+        <!-- Fernyl -->
+
+        <tr>
+            <th>Fernyl N°</th>
+            <td>---</td>
+            <td>---</td>
+            <td>---</td>
+            <td>---</td>
+        </tr>
+
+        <tr>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+        </tr>
+
+        <tr>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+        </tr>
+
+        <tr>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+        </tr>
+
+        <tr>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+            <td style="width: 14%;"><input style="width: 80%;" type="text"></td>
+        </tr>
+
+    </table>
+
+</form>
+
+
 <?php
 $content = ob_get_clean();
 require "gabarit.php";
