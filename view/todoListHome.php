@@ -26,10 +26,10 @@ $title = "CSU-NVB - Tâches hebdomadaires";
         <?php
 
         $tododata = readTodoListItems();
-        echo("<table>");
+
         foreach($tododata as $truc)
         {
-
+            echo("<table>");
             echo("<br>");
             echo("<tr><h2>".$truc["description"]."</h2><br>");
             echo("<th><strong>"."ID : ".$truc["id"]."</strong>"."<br></th>");
