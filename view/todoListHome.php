@@ -12,6 +12,10 @@ $title = "CSU-NVB - Tâches hebdomadaires";
     <div class="row m-2">
         <h2>Toutes les Tâches</h2>
     </div>
+    <hr>
+    <div class="row m-2">
+        <a class='btn btn-primary'>Modifier liste</a>
+    </div>
     <div class="row col-m">
         <?php
         $tododata = readTodoListItems();
