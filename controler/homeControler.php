@@ -7,7 +7,13 @@
  * Current version: 1.0
  */
 
-function homePage(){
-    $_GET['action'] = "home";
-    require "view/home.php";
+require_once 'index.php';
+
+function homePage()
+{
+    if (checkLoggedIn() == true) {
+        require "view/home.php";
+    } else {
+        require_once 'view/login.php';
+    }
 }

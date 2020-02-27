@@ -52,7 +52,7 @@
 
         <div class="row banner">
             <img class="col-2" src="view/contents/assets/images/logo.png">
-            <a href="index.php" class="col-10 text-center mt-5 text-decoration-none"><h1>CSU-NVB</h1></a>
+            <a href="index.php?action=home" class="col-10 text-center mt-5 text-decoration-none"><h1>CSU-NVB</h1></a>
             <a href="?action=logout" class="btn btn-primary m-1 pull-right">Se déconnecter</a>
         </div>
     </header>

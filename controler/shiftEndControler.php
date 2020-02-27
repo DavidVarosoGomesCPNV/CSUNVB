@@ -8,11 +8,15 @@
  */
 
 require_once 'model/shiftEndModel.php';
+require_once 'index.php';
 
 function shiftEndHomePage()
 {
-    require_once 'view/shiftEndHome.php';
-
+    if (checkLoggedIn() == true) {
+        require_once 'view/shiftEndHome.php';
+    } else {
+        require_once 'view/login.php';
+    }
 }
 
 /**
@@ -79,9 +83,10 @@ function addRemise()
         'cenTacNote3' => $_POST['cenTacNote3'],
     );
     //écriture dsans le tableau mémoire
-    array_push($Remises['Remise'],$ligne);
+    array_push($Remises['Remise'], $ligne);
     var_dump($Remises);
     //écriture dans le json
     updateShiftEndItems($Remises);
 }
+
 ?>

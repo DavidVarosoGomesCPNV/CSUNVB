@@ -28,3 +28,15 @@ function loginCheck()
         }
     }
 }
+
+/**
+ * function checks if the user is logged, if not they will be forced to the login page
+ */
+function checkLoggedIn()
+{
+    if (isset($_SESSION['user']) && isset($_SESSION['sector'])) {
+        return true;
+    } else {
+        return false;
+    }
+}
