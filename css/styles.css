@@ -13,3 +13,12 @@
     padding:2% 2%;
     margin:2% 2%;
 }
+
+th{
+    border:1px black solid;
+    padding: 5% 3%;
+    margin: 2% 2%;
+}
+table{
+    border:2px black dashed;
+}

@@ -1,4 +1,9 @@
 <?php
+/**
+ * Auteur: Gwenael West et Valentin Zingg
+ * Projet Web - Todolist
+ * Date: Février 2020
+ **/
 include_once 'model/todoListModel.php';
 ob_start();
 $title = "CSU-NVB - Tâches hebdomadaires";
@@ -21,34 +26,24 @@ $title = "CSU-NVB - Tâches hebdomadaires";
         $tododata = readTodoListItems();
         foreach($tododata as $truc)
         {
-            echo("<div class='tache'>");
-            echo("<h2>".$truc["description"]."</h2>");
-            echo("<strong>"."ID : ".$truc["id"]."</strong>"."<br>");
-            echo("Base : ".$truc["base"]."<br>");
+            echo("<table><br>");
+            echo("<tr><h2>".$truc["description"]."</h2><br>");
+            echo("<th><strong>"."ID : ".$truc["id"]."</strong>"."<br></th>");
+            echo("<th>Base : ".$truc["base"]."</th><br>");
 
             //Job de nuit
             if($truc["nightjob"] != 0)
             {
-                echo("Job de nuit : Oui"."<br>");
+                echo("<br><th>  Job de nuit : Oui"."<br></th>");
             }
             else
             {
-                echo("Job de nuit : Non"."<br>");
+                echo("<br><th>  Job de nuit : Non"."<br></th>");
             }
-            echo("Date : ".$truc["date"]."<br>");
+            echo("<br><th> Date : ".$truc["date"]."<br></th>");
 
-            //acquittance
-            if($truc["acknowledged_by"] != null)
-            {
-                echo("Acquitté à : ".$truc["acknowledged_by"]."<br>");
-            }
-            else
-            {
-                echo("Acquitté à : Personne"."<br>");
-            }
-            //TODO: Type et value /!\
-            echo("<a class='btn btn-primary'>Voir tâche</a>");
-            echo("</div>");
+            echo("<br></tr></table><br>");
+            echo("<hr>");
         }
         ?>
     </div>
