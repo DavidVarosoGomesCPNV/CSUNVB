@@ -11,4 +11,8 @@ function drugHomePage()
 {
     require_once 'view/drugHome.php';
 }
-?>
+
+
+
+
+
