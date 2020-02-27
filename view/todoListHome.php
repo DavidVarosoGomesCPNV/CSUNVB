@@ -1,4 +1,12 @@
 <?php
+/**
+ * CSUNVB - todoListHome.php
+ *
+ * Modified by: Fardel Bastien
+ * Initial modification made on: 06.02.2020 15:07
+ * Current version: 1.0
+ */
+
 ob_start();
 $title = "CSU-NVB - Tâches hebdomadaires";
 ?>

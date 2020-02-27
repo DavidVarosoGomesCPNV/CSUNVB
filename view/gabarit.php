@@ -1,4 +1,13 @@
-﻿<!DOCTYPE HTML>
+﻿<?php
+/**
+ * CSUNVB - gabarit.php
+ *
+ * Modified by: Fardel Bastien
+ * Initial modification made on: 06.02.2020 15:05
+ * Current version: 1.0
+ */
+?>
+<!DOCTYPE HTML>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
@@ -40,8 +49,8 @@
     <header>
         <div class="row banner">
             <img class="col-2" src="view/contents/assets/images/logo.png">
-            <a href="../index.php" class="col-10 text-center mt-5 text-decoration-none"><h1>CSU-NVB</h1></a>
-            <a href="?action=login" class="btn btn-primary m-1 pull-right">Login</a>
+            <a href="index.php" class="col-10 text-center mt-5 text-decoration-none"><h1>CSU-NVB</h1></a>
+            <a href="?action=logout" class="btn btn-primary m-1 pull-right">Se déconnecter</a>
         </div>
     </header>
 

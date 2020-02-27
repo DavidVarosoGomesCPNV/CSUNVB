@@ -1,9 +1,11 @@
 <?php
 /**
- * Ce cartouche vaudra quelques points en moins au groupe qui osera le laisser là tel quel ...
- * Auteur: X. Carrel
- * Date: Février 2020
- **/
+ * CSUNVB - shiftEndModel.php
+ *
+ * Modified by: Fardel Bastien
+ * Initial modification made on: 06.02.2020 15:38
+ * Current version: 1.0
+ */
 
 /**
  * Retourne tous les items dans un tableau indexé de tableaux associatifs

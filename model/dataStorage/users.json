@@ -1,0 +1,20 @@
+[
+  {
+    "email": "admin@cpnv.ch",
+    "password": "1234",
+    "user": "Admin Payerne",
+    "sector": "payerne"
+  },
+  {
+    "email": "kevin.gacon@cpnv.ch",
+    "password": "1234",
+    "user": "Kevin Gacon",
+    "sector": "sainte-croix"
+  },
+  {
+    "email": "arthur.bourgue@cpnv.ch",
+    "password": "1234",
+    "user": "Arthur Bourgue",
+    "sector": "sainte-croix"
+  }
+]

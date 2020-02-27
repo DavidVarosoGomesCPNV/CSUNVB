@@ -1,0 +1,30 @@
+<?php
+/**
+ * CSUNVB - loginControler.php
+ *
+ * Initial version by: Bastien.Fardel
+ * Initial version created on: 06.02.2020 15:32
+ * Current version: 1.0
+ */
+
+require "model/loginModel.php";
+
+/**
+ * function checks the login information, if something is wrong it will alert the user and will prevent the user from accessing the site
+ */
+function loginCheck()
+{
+    if (isset($_POST['email']) && isset($_POST['pass'])) {
+        $email = $_POST['email'];
+        $password = $_POST['pass'];
+
+        if (databaseLoginCheck($email, $password) == true) { //The email and password are correct, proceed to home page
+            $_GET['action'] = "home";
+
+            require_once 'view/home.php';
+        } else { //The email and password are incorrect, proceed to alert the user and reload the page
+            echo '<script> alert ("Email ou mot de passe incorrect") </script>';
+            require_once 'view/login.php';
+        }
+    }
+}
