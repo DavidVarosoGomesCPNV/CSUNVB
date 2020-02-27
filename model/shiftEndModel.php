@@ -14,7 +14,7 @@
  */
 function readShiftEndItems()
 {
-    return json_decode(file_get_contents("model/dataStorage/items.json"),true);
+    return json_decode(file_get_contents("model/dataStorage/shiftEndAdd.json"),true);
 }
 
 /**
@@ -34,7 +34,7 @@ function readShiftEndItem($id)
  */
 function updateShiftEndItems($items)
 {
-    file_put_contents("model/dataStorage/items.json",json_encode($items));
+    file_put_contents("model/dataStorage/shiftEndAdd.json",json_encode($items));
 }
 
 /**
