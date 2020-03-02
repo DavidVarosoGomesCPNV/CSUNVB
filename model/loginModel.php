@@ -45,6 +45,7 @@ function databaseLoginCheck($email, $password)
             if (password_verify($password, $accountHash)) {
                 $_SESSION['user'] = $row['user'];
                 $_SESSION['sector'] = $row['sector'];
+                $_SESSION['admin'] = $row['admin'];
 
                 break;
             }
