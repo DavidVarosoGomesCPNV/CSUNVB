@@ -65,8 +65,8 @@
                 </a>
                 <a href="?action=logout" class="btn btn-primary m-1 pull-right">Se déconnecter</a>
                 <?php
-                if (isset($_SESSION['user'])){
-                    echo '<p style="font-weight: bold; color: Black" class="m-2 text-right col-9">Bonjour <span style="color: #007bff">' . $_SESSION['user'] .' </span></p>'; //
+                if (isset($_SESSION['user'])) {
+                    echo '<p style="font-weight: bold; color: Black" class="m-2 text-right col-9">Bonjour <span style="color: #007bff">' . $_SESSION['user'] . ' </span> | Connecté sur <span style="color: #007bff">' . $_SESSION['sector'] . '</span></p>'; //
                 }
                 ?>
             </div>
