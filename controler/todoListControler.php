@@ -8,9 +8,15 @@
  */
 
 require_once 'model/todoListModel.php';
+require_once 'index.php';
 
 function todoListHomePage()
 {
-    require_once 'view/todoListHome.php';
+    {
+        if (checkLoggedIn() == true) {
+            require_once 'view/todoListHome.php';
+        } else {
+            require_once 'view/login.php';
+        }
+    }
 }
-?>

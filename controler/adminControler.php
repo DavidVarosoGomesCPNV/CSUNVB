@@ -8,9 +8,15 @@
  */
 
 require_once 'model/adminModel.php';
+require_once 'index.php';
 
 function adminHomePage()
 {
-    require_once 'view/adminHome.php';
+    {
+        if (checkLoggedIn() == true) {
+            require_once 'view/adminHome.php';
+        } else {
+            require_once 'view/login.php';
+        }
+    }
 }
-?>

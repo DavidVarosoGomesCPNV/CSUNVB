@@ -36,15 +36,23 @@ function readJSON()
 function databaseLoginCheck($email, $password)
 {
     $usersArray = readJSON();
+    $accountHash = null;
 
     //Checks each users in the JSON file
     foreach ($usersArray as $row) {
-        if ($row["email"] === $email && $row["password"] === $password) { //If the email and password are correct, breaks out of the foreach and puts the name and sector of the user in the SESSION Array.
-            $_SESSION['user'] = $row["user"];
-            $_SESSION['sector'] = $row["sector"];
-            return true;
+        if ($row["email"] === $email) { //If the email is correct, catch the hashed password and compare it with the given password
+            $accountHash = $row['password'];
+            if (password_verify($password, $accountHash)) {
+                $_SESSION['user'] = $row['user'];
+                $_SESSION['sector'] = $row['sector'];
 
-            break;
+                break;
+            }
         }
+    }
+    if (isset($_SESSION['user']) && isset($_SESSION['sector'])) {
+        return true;
+    } else {
+        return false;
     }
 }
