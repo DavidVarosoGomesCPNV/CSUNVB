@@ -48,7 +48,7 @@
 
     <header>
         <div class="row banner" >
-
+        <div class=""
 
         <div class="row banner">
             <img class="col-2" src="view/contents/assets/images/logo.png">

@@ -25,7 +25,7 @@ function readShiftEndItem($id)
 {
     $items = getShiftEndItems();
     // TODO: coder la recherche de l'item demandé
-    return $item;
+    return $items;
 }
 
 /**

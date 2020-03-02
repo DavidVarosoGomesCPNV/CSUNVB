@@ -11,7 +11,6 @@
 }
 
 .colorButton {
-
     background-color: #95d3f1;
     margin-left: 5px;
 }
@@ -33,37 +32,13 @@
     border-right: black 1px solid;
 }
 
-#first{
-    text-align: right;
-}
-
 .info{
-    max-width: 100%;
     min-width: 100%;
 }
 
-#tableMaterielTelecom{
+#tableMaterielTelecom, #tableVehiculeIntervention, #tableEcranDeCom, #tableCentraleTache{
     text-align: center;
     display: none;
-}
-
-#tableVehiculeIntervention{
-    display: none;
-    text-align: center;
-}
-
-#tableEcranDeCom{
-    display: none;
-    text-align: center;
-}
-
-#tableCentraleTache{
-    display: none;
-    text-align: center;
-}
-
-.titleTable{
-    font-size: 20px;
 }
 
 .radioYN{
@@ -75,7 +50,6 @@
     margin-top: 5px;
     max-height: 50px;
     min-height: 50px;
-    font-size: 12px;
     width: 100%;
     background-color: #779bce;
     border: 2px solid white;
@@ -89,4 +63,10 @@
 
 #finish{
     float: right;
+}
+
+#verifMessage{
+    float: right;
+    margin-top: 7px;
+    color: #95d3f1;
 }
