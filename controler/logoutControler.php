@@ -1,6 +1,6 @@
 <?php
 /**
- * CSUNVB - logout.php
+ * CSUNVB - logoutControler.php
  *
  * Initial version by: Bastien.FARDEL
  * Initial version created on: 24.02.2020 11:53

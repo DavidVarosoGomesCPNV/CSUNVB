@@ -19,13 +19,23 @@ function loginCheck()
         $password = $_POST['pass'];
 
         if (databaseLoginCheck($email, $password) == true) { //The email and password are correct, proceed to home page
-            $_GET['action'] = "home";
+            if (isset($_SESSION['new'])) {
+                if ($_SESSION['new'] == 'yes') {
+                    $_GET['action'] = "newUser";
 
-            require_once 'view/home.php';
+                    require_once 'view/newUser.php';
+                } else {
+                    $_GET['action'] = "home";
+
+                    require_once 'view/home.php';
+                }
+            }
         } else { //The email and password are incorrect, proceed to alert the user and reload the page
             echo '<script> alert ("Email ou mot de passe incorrect") </script>';
             require_once 'view/login.php';
         }
+    } else {
+        require_once 'view/login.php';
     }
 }
 
@@ -34,7 +44,7 @@ function loginCheck()
  */
 function checkLoggedIn()
 {
-    if (isset($_SESSION['user']) && isset($_SESSION['sector'])) {
+    if (isset($_SESSION['user']) && isset($_SESSION['sector'])) { //If the user is connected return bool true otherwise return bool false
         return true;
     } else {
         return false;
