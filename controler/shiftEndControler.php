@@ -19,6 +19,15 @@ function shiftEndHomePage()
     }
 }
 
+function detailedShiftEnd(){
+    if (checkLoggedIn() == true) {
+        require_once 'view/detailedShiftEnd.php';
+    } else {
+        require_once 'view/login.php';
+    }
+}
+
+
 /**
  * Fonction qui test le fichier json avec insertion d'une remise
  */
@@ -27,8 +36,7 @@ function addRemise()
 
     //lecture du json
     $Remises = readShiftEndItems();
-    //affichage d'une donnée
-    var_dump($Remises);
+
     //création d'une ligne de remise
     $ligne = array
     (
@@ -84,9 +92,13 @@ function addRemise()
     );
     //écriture dsans le tableau mémoire
     array_push($Remises['Remise'], $ligne);
-    var_dump($Remises);
     //écriture dans le json
     updateShiftEndItems($Remises);
+
+    $_GET['action'] = "shiftendHome";
+    require_once 'view/shiftEndHome.php';
 }
+
+
 
 ?>

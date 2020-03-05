@@ -26,6 +26,9 @@ if (isset($_GET['action'])) {
         case 'login':
             loginCheck();
             break;
+        case 'detailedShiftEnd':
+            detailedShiftEnd();
+            break;
         case 'logout':
             logout();
             break;
