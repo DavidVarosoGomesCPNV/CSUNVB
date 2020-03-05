@@ -15,7 +15,8 @@ require "controler/todoListControler.php";
 require "controler/drugControler.php";
 require "controler/loginControler.php";
 require "controler/homeControler.php";
-require "controler/logout.php";
+require "controler/logoutControler.php";
+require "controler/newUserControler.php";
 
 if (isset($_GET['action'])) {
     $action = $_GET['action'];
@@ -28,6 +29,9 @@ if (isset($_GET['action'])) {
             break;
         case 'logout':
             logout();
+            break;
+        case 'newUser':
+            newUser();
             break;
         case 'home' :
             homePage();

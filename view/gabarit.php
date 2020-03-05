@@ -56,13 +56,13 @@
 
 
             <div class="row banner">
-                <a href="index.php?action=home" class="col-2"><img src="view/contents/assets/images/logo.png"></a>
+                <img class="col-2" src="view/contents/assets/images/logo.png"> <!-- les gars vous savez commment faire pour la rendre 'responsive' ? -->
                 <a href="index.php?action=home" class="col-10 text-center mt-5 text-decoration-none"><h1>CSU-NVB</h1>
                 </a>
                 <a href="?action=logout" class="btn btn-primary m-1 pull-right">Se déconnecter</a>
                 <?php
                 if (isset($_SESSION['user'])) {
-                    echo '<p style="font-weight: bold; color: Black" class="m-2 text-right col-9">Bonjour <span style="color: #007bff">' . $_SESSION['user'] . ' </span> | Connecté sur <span style="color: #007bff">' . $_SESSION['sector'] . '</span></p>'; //
+                    echo '<p style="font-weight: bold; color: Black" class="m-2 text-right col-9">Bonjour <span style="color: #007bff">' . $_SESSION['user'] . ' </span> | Connecté sur <span style="color: #007bff">' . $_SESSION['sector'] . '</span></p>'; // affiche le nom de l'utilisateur et sa base
                 }
                 ?>
             </div>

@@ -4,20 +4,23 @@
     "password": "$2y$10$UNTRPR75zYLI3zl1tcxXyuTCILQgOi6IXtlcUIn4jAo76OgXp3VuK",
     "user": "Admin Payerne",
     "sector": "Payerne",
-    "admin": "yes"
+    "admin": "yes",
+    "new": "no"
   },
   {
     "email": "kevin.gacon@cpnv.ch",
     "password": "$2y$10$UNTRPR75zYLI3zl1tcxXyuTCILQgOi6IXtlcUIn4jAo76OgXp3VuK",
     "user": "Kevin Gacon",
     "sector": "Sainte-Croix",
-    "admin": "no"
+    "admin": "no",
+    "new": "yes"
   },
   {
     "email": "arthur.bourgue@cpnv.ch",
     "password": "$2y$10$UNTRPR75zYLI3zl1tcxXyuTCILQgOi6IXtlcUIn4jAo76OgXp3VuK",
     "user": "Arthur Bourgue",
     "sector": "Sainte-Croix",
-    "admin": "no"
+    "admin": "no",
+    "new": "yes"
   }
 ]

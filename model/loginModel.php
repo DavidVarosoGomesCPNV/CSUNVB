@@ -40,18 +40,20 @@ function databaseLoginCheck($email, $password)
 
     //Checks each users in the JSON file
     foreach ($usersArray as $row) {
-        if ($row["email"] === $email) { //If the email is correct, catch the hashed password and compare it with the given password
+        if ($row['email'] === $email) { //If the email is correct, catch the hashed password and compare it with the given password
             $accountHash = $row['password'];
             if (password_verify($password, $accountHash)) {
+                $_SESSION['email'] = $row['email'];
                 $_SESSION['user'] = $row['user'];
                 $_SESSION['sector'] = $row['sector'];
                 $_SESSION['admin'] = $row['admin'];
+                $_SESSION['new'] = $row['new'];
 
                 break;
             }
         }
     }
-    if (isset($_SESSION['user']) && isset($_SESSION['sector'])) {
+    if (isset($_SESSION['user']) && isset($_SESSION['sector'])) { //If the user is connected, then return bool true otherwise return bool false
         return true;
     } else {
         return false;
