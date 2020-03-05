@@ -12,7 +12,8 @@ function drugHomePage()
     require_once 'view/drugHome.php';
 }
 
-
-
-
+function cloturerDay(){
+    cloturer();
+    require "view/drugHome.php";
+}
 

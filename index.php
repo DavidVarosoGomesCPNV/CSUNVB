@@ -23,6 +23,9 @@ switch ($action)
     case 'drugs':
         drugHomePage();
         break;
+    case 'cloturerDay':
+        cloturerDay();
+        break;
     default: // unknown action
         require_once 'view/home.php';
         break;

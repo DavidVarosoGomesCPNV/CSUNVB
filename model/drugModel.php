@@ -12,7 +12,7 @@
  */
 function readDrugItems()
 {
-    return json_decode(file_get_contents("model/dataStorage/items.json"),true);
+    return json_decode(file_get_contents("model/dataStorage/items.json"), true);
 }
 
 /**
@@ -32,7 +32,7 @@ function readDrugItem($id)
  */
 function updateDrugItems($items)
 {
-    file_put_contents("model/dataStorage/items.json",json_encode($items));
+    file_put_contents("model/dataStorage/items.json", json_encode($items));
 }
 
 /**
@@ -72,5 +72,69 @@ function createDrugItem($item)
     return ($item); // Pour que l'appelant connaisse l'id qui a été donné
 }
 
+
+?>
+
+<?php
+
+
+function cloturer()
+{
+    if (isset($_POST['cloturer'])) { // si formulaire soumis
+
+        $JsonFile = fopen("model/dataStorage/dataDrugs.json", "w");
+
+        $data = array(
+            "Site" => @$_POST['Site'],
+
+            "Vehicule 1" => @$_POST['ambulance1'],
+            "Vehicule 2" => @$_POST['ambulance2'],
+
+            "Valeur de depart VHC1" => @$_POST['VHC1_StartValue1'],
+            "Valeur de depart VHC2" => @$_POST['VHC2_StartValue1'],
+
+
+            "ID Morphine1" => @$_POST['morphineValue1'],
+            "Valeur de depart pharmacie" => @$_POST['pharmaValue1'],
+            "Morphine utilisee VHC1" => @$_POST['VHC1_MorphineUsed1'],
+            "Morphine utilisee VHC2" => @$_POST['VHC2_MorphineUsed1'],
+            "Valeur de fin pharmacie" => @$_POST['pharma2Value1'],
+
+
+            "ID Morphine2" => @$_POST['morphineValue2'],
+            "Valeur de depart pharmacie_2" => @$_POST['pharmaValue2'],
+            "Morphine utilisee VHC1_2" => @$_POST['VHC1_MorphineUsed2'],
+            "Morphine utilisee VHC2_2" => @$_POST['VHC2_MorphineUsed2'],
+            "Valeur de fin pharmacie_2" => @$_POST['pharma2Value2'],
+
+
+            "ID Morphine3" => @$_POST['morphineValue3'],
+            "Valeur de depart pharmacie_3" => @$_POST['pharmaValue3'],
+            "Morphine utilisee VHC1_3" => @$_POST['VHC1_MorphineUsed3'],
+            "Morphine utilisee VHC2_3" => @$_POST['VHC2_MorphineUsed3'],
+            "Valeur de fin pharmacie_3" => @$_POST['pharma2Value3'],
+
+
+            "ID Morphine4" => @$_POST['morphineValue4'],
+            "Valeur de depart pharmacie_4" => @$_POST['pharmaValue4'],
+            "Morphine utilisee VHC1_4" => @$_POST['VHC1_MorphineUsed4'],
+            "Morphine utilisee VHC2_4" => @$_POST['VHC2_MorphineUsed4'],
+            "Valeur de fin pharmacie_4" => @$_POST['pharma2Value4'],
+
+        );
+
+        $JsonContent = json_encode($data);
+        fwrite($JsonFile, $JsonContent);
+
+
+        /* echo pour tester si les valeurs rentrent bien dans le JSON
+        var_dump($data);
+        // echo $JsonContent;
+         */
+
+        fclose($JsonFile);
+
+    }
+}
 
 ?>
