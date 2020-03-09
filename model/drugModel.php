@@ -87,50 +87,59 @@ function cloturer()
         $data = array(
             "Site" => @$_POST['Site'],
 
-            "Vehicule 1" => @$_POST['ambulance1'],
-            "Vehicule 2" => @$_POST['ambulance2'],
+            // Morphine
+            "Vehicule_1_Morphine" => @$_POST['ambulance1_morph'],
+            "Vehicule_2_Morphine" => @$_POST['ambulance2_morph'],
 
-            "Valeur de depart VHC1" => @$_POST['VHC1_StartValue1'],
-            "Valeur de depart VHC2" => @$_POST['VHC2_StartValue1'],
+            "Valeur_de_depart VHC1__Morphine" => @$_POST['VHC1_StartValue1'],
+            "Valeur_de_depart VHC2__Morphine" => @$_POST['VHC2_StartValue1'],
 
+            // Fernyl
+            "Vehicule_1_Fernyl" => @$_POST['ambulance1_fernyl'],
+            "Vehicule_2_Fernyl" => @$_POST['ambulance2_fernyl'],
 
-            "ID Morphine1" => @$_POST['morphineValue1'],
-            "Valeur de depart pharmacie" => @$_POST['pharmaValue1'],
-            "Morphine utilisee VHC1" => @$_POST['VHC1_MorphineUsed1'],
-            "Morphine utilisee VHC2" => @$_POST['VHC2_MorphineUsed1'],
-            "Valeur de fin pharmacie" => @$_POST['pharma2Value1'],
+            "Valeur_de_depart VHC1__Fernyl" => @$_POST['VHC1_StartValue2'],
+            "Valeur_de_depart VHC2__Fernyl" => @$_POST['VHC2_StartValue2']);
 
-
-            "ID Morphine2" => @$_POST['morphineValue2'],
-            "Valeur de depart pharmacie_2" => @$_POST['pharmaValue2'],
-            "Morphine utilisee VHC1_2" => @$_POST['VHC1_MorphineUsed2'],
-            "Morphine utilisee VHC2_2" => @$_POST['VHC2_MorphineUsed2'],
-            "Valeur de fin pharmacie_2" => @$_POST['pharma2Value2'],
+            // Tempsta
 
 
-            "ID Morphine3" => @$_POST['morphineValue3'],
-            "Valeur de depart pharmacie_3" => @$_POST['pharmaValue3'],
-            "Morphine utilisee VHC1_3" => @$_POST['VHC1_MorphineUsed3'],
-            "Morphine utilisee VHC2_3" => @$_POST['VHC2_MorphineUsed3'],
-            "Valeur de fin pharmacie_3" => @$_POST['pharma2Value3'],
+        for ($i = 1; $i <= 10; $i++) {
 
+            $Val = @$_POST['morphineValue' . $i];
 
-            "ID Morphine4" => @$_POST['morphineValue4'],
-            "Valeur de depart pharmacie_4" => @$_POST['pharmaValue4'],
-            "Morphine utilisee VHC1_4" => @$_POST['VHC1_MorphineUsed4'],
-            "Morphine utilisee VHC2_4" => @$_POST['VHC2_MorphineUsed4'],
-            "Valeur de fin pharmacie_4" => @$_POST['pharma2Value4'],
+            if (isset($Val)) {
 
-        );
+                if (strlen($Val) > 0) {
+
+                    $data ["ID_Morphine" . $i] = @$_POST['morphineValue' . $i];
+                    $data ["Valeur_de_depart_pharmacie_Morphine" . $i] = @$_POST['pharma_MValue' . $i];
+                    $data ["Morphine_utilisee_VHC1_" . $i] = @$_POST['VHC1_MorphineUsed' . $i];
+                    $data ["Morphine_utilisee_VHC2_" . $i] = @$_POST['VHC2_MorphineUsed' . $i];
+                    $data ["Valeur_de_fin_pharmacie__Morphine" . $i] = @$_POST['pharma2_MValue' . $i];
+                }
+            }
+        }
+
+        for ($x = 1; $x <= 10; $x++) {
+
+            $ValX = @$_POST['fernylValue' . $x];
+
+            if (isset($ValX)) {
+
+                if (strlen($ValX) > 0) {
+
+                    $data ["ID_Fernyl" . $x] = @$_POST['fernylValue' . $x];
+                    $data ["Valeur_de_depart_pharmacie_Fernyl" . $x] = @$_POST['pharma_FValue' . $x];
+                    $data ["Fernyl_utilisee_VHC1_" . $x] = @$_POST['VHC1_FernylUsed' . $x];
+                    $data ["Fernyl_utilisee_VHC2_" . $x] = @$_POST['VHC2_FernylUsed' . $x];
+                    $data ["Valeur_de_fin_pharmacie_Fernyl" . $x] = @$_POST['pharma2_FValue' . $x];
+                }
+            }
+        }
 
         $JsonContent = json_encode($data);
         fwrite($JsonFile, $JsonContent);
-
-
-        /* echo pour tester si les valeurs rentrent bien dans le JSON
-        var_dump($data);
-        // echo $JsonContent;
-         */
 
         fclose($JsonFile);
 

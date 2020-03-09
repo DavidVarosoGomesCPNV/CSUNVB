@@ -7,7 +7,6 @@ require "controler/drugControler.php";
 
 $action = @$_GET['action'];
 
-// Site de base OP
 
 switch ($action)
 {

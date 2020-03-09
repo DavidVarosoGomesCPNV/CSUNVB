@@ -29,7 +29,6 @@ $title = "CSU-NVB - Stupéfiants";
 
 <h1>Stupéfiants - Semaine X</h1>
 <form action="/index.php?action=cloturerDay" method="POST">
-
     <table id="myTable">
         <tr>
             <th>
@@ -44,13 +43,13 @@ $title = "CSU-NVB - Stupéfiants";
             </th>
             <th colspan="4"><?php $date1 = date('Y-m-d'); // Date du jour
                 setlocale(LC_TIME, "fr_FR", "French");
-                echo strftime("%A, %d %B %G", strtotime($date1));?></th>
+                echo strftime("%A, %d %B %G", strtotime($date1)); ?></th>
         </tr>
         <tr>
             <td>---</td>
             <td>Pharmacie</td>
             <td>VHC 1
-                <select name="ambulance1" size="1">
+                <select name="ambulance1_morph" size="1">
                     <OPTION>35
                     <OPTION>57
                     <OPTION>76
@@ -66,7 +65,7 @@ $title = "CSU-NVB - Stupéfiants";
                 </select>
             </td>
 
-            <td>VHC 2<select name="ambulance2" size="1">
+            <td>VHC 2<select name="ambulance2_morph" size="1">
                     <OPTION>35
                     <OPTION>57
                     <OPTION>76
@@ -85,7 +84,9 @@ $title = "CSU-NVB - Stupéfiants";
         </tr>
 
         <tr>
-            <td>Morphine N°</td>
+            <td>Morphine N°
+                <button type="button" id="Bouton+" onclick="AddInputMorph();">+</button>
+            </td>
             <td>----</td>
             <td><input name="VHC1_StartValue1" type="text"></td>
             <td><input name="VHC2_StartValue1" type="text"></td>
@@ -93,74 +94,85 @@ $title = "CSU-NVB - Stupéfiants";
         </tr>
 
         <tr>
-            <td><input name="morphineValue1" type="text"></td>
-            <td><input name="pharmaValue1" type="text"></td>
-            <td><input name="VHC1_MorphineUsed1" type="text"></td>
-            <td><input name="VHC2_MorphineUsed1" type="text"></td>
-            <td><input name="pharma2Value1" type="text"></td>
-        </tr>
-        <tr>
             <td><input name="morphineValue2" type="text"></td>
-            <td><input name="pharmaValue2" type="text"></td>
-            <td><input name="VHC1_MorphineUsed2" type="text"></td>
+            <td><input name="pharma_MValue2" type="text"></td>
+            <td><input name="VHC1_MorphineUsed1" type="text"></td>
             <td><input name="VHC2_MorphineUsed2" type="text"></td>
-            <td><input name="pharma2Value2" type="text"></td>
+            <td><input name="pharma2_MValue2" type="text"></td>
         </tr>
+
         <tr>
-            <td><input name="morphineValue3" type="text"></td>
-            <td><input name="pharmaValue3" type="text"></td>
-            <td><input name="VHC1_MorphineUsed3" type="text"></td>
-            <td><input name="VHC2_MorphineUsed3" type="text"></td>
-            <td><input name="pharma2Value3" type="text"></td>
+            <td><input name="morphineValue1" type="text"></td>
+            <td><input name="pharma_MValue1" type="text"></td>
+            <td><input name="VHC1_MorphineUsed1" type="text"></td>
+            <td><input name="VHC2_MorphineUsed2" type="text"></td>
+            <td><input name="pharma2_MValue1" type="text"></td>
         </tr>
-        <tr>
-            <td><input name="morphineValue4" type="text"></td>
-            <td><input name="pharmaValue4" type="text"></td>
-            <td><input name="VHC1_MorphineUsed4" type="text"></td>
-            <td><input name="VHC2_MorphineUsed4" type="text"></td>
-            <td><input name="pharma2Value4" type="text"></td>
-        </tr>
+
 
         <!-- Fernyl -->
 
         <tr>
-            <th>Fernyl N°</th>
             <td>---</td>
-            <td>---</td>
-            <td>---</td>
-            <td>---</td>
+            <td>Pharmacie</td>
+            <td>VHC 1
+                <select name="ambulance1_fernyl" size="1">
+                    <OPTION>35
+                    <OPTION>57
+                    <OPTION>76
+                    <OPTION>77
+                    <OPTION>75
+                    <OPTION>32
+                    <OPTION>57
+                    <OPTION>58
+                    <OPTION>33
+                    <OPTION>31
+                    <OPTION>36
+                    <OPTION>33
+                </select>
+            </td>
+            <td>VHC 2<select name="ambulance2_fernyl" size="1">
+                    <OPTION>35
+                    <OPTION>57
+                    <OPTION>76
+                    <OPTION>77
+                    <OPTION>75
+                    <OPTION>32
+                    <OPTION>57
+                    <OPTION>58
+                    <OPTION>33
+                    <OPTION>31
+                    <OPTION>36
+                    <OPTION>33
+                </select>
+            </td>
+            <td>Pharmacie</td>
         </tr>
 
         <tr>
-            <td><input name="fernylValue1" type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
+            <td>Fernyl N°
+                <button type="button" id="Bouton+" onclick="">+</button>
+            </td>
+            <td>---</td>
+            <td><input name="VHC1_StartValue2" type="text"></td>
+            <td><input name="VHC2_StartValue2" type="text"></td>
+            <td>---</td>
         </tr>
 
         <tr>
             <td><input name="fernylValue2" type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
+            <td><input name="pharma_FValue2" type="text"></td>
+            <td><input name="VHC1_FernylUsed1" type="text"></td>
+            <td><input name="VHC2_FernylUsed2" type="text"></td>
+            <td><input name="pharma2_FValue2" type="text"></td>
         </tr>
 
         <tr>
-            <td><input name="fernylValue3" type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-        </tr>
-
-        <tr>
-            <td><input name="fernylValue4" type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
+            <td><input name="fernylValue1" type="text"></td>
+            <td><input name="pharma_FValue1" type="text"></td>
+            <td><input name="VHC1_FernylUsed1" type="text"></td>
+            <td><input name="VHC2_FernylUsed2" type="text"></td>
+            <td><input name="pharma2_FValue1" type="text"></td>
         </tr>
 
         <!-- TEMESTA -->
@@ -216,6 +228,9 @@ $title = "CSU-NVB - Stupéfiants";
     <br>
     <input style="width: 250px;" type="submit" value="Cloturer" name="cloturer">
 </form>
+
+<script src="/js/drugsFormAdd.js"></script>
+
 
 <?php
 
