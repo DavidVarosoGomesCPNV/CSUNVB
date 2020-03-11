@@ -22,8 +22,14 @@ switch ($action)
     case 'drugs':
         drugHomePage();
         break;
+    case 'drugForm':
+        drugFromPage();
+        break;
     case 'cloturerDay':
         cloturerDay();
+        break;
+    case 'drugArchives':
+        drugArchives();
         break;
     default: // unknown action
         require_once 'view/home.php';

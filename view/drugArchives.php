@@ -1,9 +1,17 @@
 <?php
+/**
+ * Created By PhpStrom.
+ * Title : CSUNVB - drugArchives.php
+ * User : David-Manuel.VAROSO
+ * Date : 10.03.2020
+ * Time : 09:21
+ */
+
 ob_start();
 $title = "CSU-NVB - Stupéfiants";
 
-?>
 
+?>
 <html lang="fr">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,18 +53,16 @@ $title = "CSU-NVB - Stupéfiants";
     <li><a href="?action=drugArchives">Archives</a></li>
 </ul>
 
-<div>
-    <a class="text-decoration-none card col-4 menutile pl-3 pr-3 pt-5 pb-5 m-1 align-items-center" href="?action=drugForm">Feuille en cours</a>
-</div>
+Archives
 
 
 </body>
 </html>
 
 
-
-
 <?php
+
+
 $content = ob_get_clean();
 require "gabarit.php";
 

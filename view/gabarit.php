@@ -11,7 +11,9 @@
 
     <link href="/view/content/scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/view/content/scripts/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="/https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="/view/contents/css/styles.css" rel="stylesheet">
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
     <script src="/http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -46,21 +48,23 @@
     <link href="http://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" type="text/css">
 
     <link href="/view/content/styles/custom.css" rel="stylesheet" type="text/css"/>
+
+
 </head>
 <body>
 
 <div class="container">
-    <header>
-        <div class="row banner">
-            <img class="col-2" src="/assets/images/logo.png" alt="logo">
-            <a href="/index.php" class="col-10 text-center mt-5 text-decoration-none"><h1>CSU-NVB</h1></a>
-            <a href="?action=login" class="btn btn-primary m-1 pull-right">Login</a>
-        </div>
-    </header>
+    <div class="row">
+        <div class="col-sm-4"><img src="/assets/images/logo.png" logo"></div>
+        <div class="col-sm-8"></div>
+    </div>
+    <div class="row"><div class="col-sm-12"><a href="?action=login" class="btn btn-primary col-sm-2 pull-right" >Login</a></div></div>
 
     <div>
         <?= $content; ?>
     </div>
+
+</div>
 
 </body>
 </html>

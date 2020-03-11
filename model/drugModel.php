@@ -103,15 +103,15 @@ function cloturer()
 
             // Tempsta
 
-
+        // Boucle pour les id / noms des input pour la morphine
         for ($i = 1; $i <= 10; $i++) {
-
+            // Récuper la derniere valeur de morphineValue utilisé dans le code brut
             $Val = @$_POST['morphineValue' . $i];
-
+            // Donc si le $Val est set
             if (isset($Val)) {
-
+                // Il compte d'abord la valeur de $Val et la compare à > 0
                 if (strlen($Val) > 0) {
-
+                    // Si c'est true il crée donc les input avec les noms incrementées
                     $data ["ID_Morphine" . $i] = @$_POST['morphineValue' . $i];
                     $data ["Valeur_de_depart_pharmacie_Morphine" . $i] = @$_POST['pharma_MValue' . $i];
                     $data ["Morphine_utilisee_VHC1_" . $i] = @$_POST['VHC1_MorphineUsed' . $i];
@@ -121,8 +121,9 @@ function cloturer()
             }
         }
 
+        // Boucle pour les id / noms des input pour le fernyl
         for ($x = 1; $x <= 10; $x++) {
-
+            // Récuper la derniere valeur de fernylValue utilisé dans le code brut
             $ValX = @$_POST['fernylValue' . $x];
 
             if (isset($ValX)) {
