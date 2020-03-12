@@ -55,7 +55,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-4"><img src="/assets/images/logo.png" logo"></div>
+        <div class="col-sm-4"><img src="/assets/images/logo.png"></div>
         <div class="col-sm-8"></div>
     </div>
     <div class="row"><div class="col-sm-12"><a href="?action=login" class="btn btn-primary col-sm-2 pull-right" >Login</a></div></div>

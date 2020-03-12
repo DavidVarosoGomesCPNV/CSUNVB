@@ -1,32 +1,21 @@
 {
-  "Site": "Saint-Loup",
-  "Vehicule_1_Morphine": "76",
-  "Vehicule_2_Morphine": "77",
-
+  "Site": "Payerne",
+  "Vehicule_1_Morphine": "35",
+  "Vehicule_2_Morphine": "35",
   "Valeur_de_depart VHC1__Morphine": "4 - 4",
   "Valeur_de_depart VHC2__Morphine": "4 - 4 ",
-
-  "Vehicule_1_Fernyl": "76",
-  "Vehicule_2_Fernyl": "77",
-
+  "Vehicule_1_Fernyl": "35",
+  "Vehicule_2_Fernyl": "35",
   "Valeur_de_depart VHC1__Fernyl": "4 - 4",
   "Valeur_de_depart VHC2__Fernyl": "4 - 4 ",
-
   "ID_Morphine2": "2123",
   "Valeur_de_depart_pharmacie_Morphine2": "9",
   "Morphine_utilisee_VHC1_2": null,
   "Morphine_utilisee_VHC2_2": "",
   "Valeur_de_fin_pharmacie__Morphine2": "8",
-
-  "ID_Morphine3": "32323",
-  "Valeur_de_depart_pharmacie_Morphine3": "5",
-  "Morphine_utilisee_VHC1_3": "4",
-  "Morphine_utilisee_VHC2_3": "",
-  "Valeur_de_fin_pharmacie__Morphine3": "1",
-
   "ID_Fernyl2": "12312",
-  "Valeur_de_depart_pharmacie_Fernyl2": "5",
+  "Valeur_de_depart_pharmacie_Fernyl2": "6",
   "Fernyl_utilisee_VHC1_2": null,
   "Fernyl_utilisee_VHC2_2": "",
-  "Valeur_de_fin_pharmacie_Fernyl2": "4"
+  "Valeur_de_fin_pharmacie_Fernyl2": "5"
 }

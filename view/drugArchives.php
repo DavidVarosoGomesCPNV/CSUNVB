@@ -52,8 +52,16 @@ $title = "CSU-NVB - Stupéfiants";
     <li><a href="?action=drugs">Stup</a></li>
     <li><a href="?action=drugArchives">Archives</a></li>
 </ul>
+<?php
 
-Archives
+$path = file_get_contents("model/dataStorage/dataDrugs.json");
+$tempArray = json_decode($path,true);
+
+var_dump($tempArray);
+
+
+?>
+
 
 
 </body>

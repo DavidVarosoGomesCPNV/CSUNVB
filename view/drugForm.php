@@ -265,6 +265,7 @@ $title = "CSU-NVB - Stupéfiants";
     </table>
     <br>
     <input style="width: 250px;" type="submit" value="Cloturer" name="cloturer">
+
 </form>
 
 <script src="/js/drugsFormAdd.js"></script>
