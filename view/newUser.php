@@ -31,7 +31,7 @@
                 <span class="login100-form-title p-b-33">Veuillez changer votre mot de passe</span>
 
                 <div class="wrap-input100 validate-input" data-validate="Un Email valide est requis: ex@abc.xyz">
-                    <input class="input100" type="text" name="email" disabled
+                    <input class="input100" type="text" name="chosenEmail" disabled
                            value="<?php if (isset($_SESSION['email'])) {
                                echo $_SESSION['email'];
                            } else {
