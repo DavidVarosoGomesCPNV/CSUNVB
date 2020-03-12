@@ -33,9 +33,14 @@ $title = "CSU-NVB - Remise de garde";
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            Date
-                            <input name="info1" class="info" type="date" style="width: 135px"
-                                   required>
+                            <strong>
+                                <?php
+                                $dateDays = date("Y-m-d");
+                                ?>
+                                <input name="info1" class="info" type="date" readonly
+                                       style="cursor: default;font-size: 30px;width: 135px;background-color: #abd8f5;border: none;outline: none"
+                                        value="<?php echo $dateDays; ?>" >
+                            </strong>
                         </div>
                     </div>
 
@@ -372,13 +377,17 @@ $title = "CSU-NVB - Remise de garde";
             </div>
             <br>
             <div id="shiftEndAddBottom">
-                <div class="container-fluid">
-                    <input type="button" class="btn colorButton" value="Annuler" onclick="ShiftEndAdd()">
-                    <input type="submit" class="btn colorButton" id="finish" value="Terminer" é>
-                    <input type="button" class="btn colorButton" value="<" onclick="PreviousAdd()" id="prev" disabled>
-                    <input type="button" class="btn colorButton" value=">" onclick="NextAdd()" id="next">
-                    <span style="color: white"><span id="currentPage">1</span>/5</span>
-                    <span id="verifMessage">Un champ ou plus n'a pas étè rempli !</span>
+                <div class="BottomShiftEnd">
+                    <input type="button" class="btn colorButton" id="cancel" value="Annuler" onclick="ShiftEndAdd()">
+                    <input type="submit" class="btn colorButton" id="finish" value="Terminer">
+
+                    <input type="button" value="‹‹" onclick="" id="firstPage" disabled>
+                    <input type="button" value="‹" onclick="PreviousAdd()" id="prev" disabled>
+                    <input type="button" value="›" onclick="NextAdd()" id="next">
+                    <input type="button" value="››" onclick="" id="lastPage">
+
+
+                    <span style="color: white" class="nbrPage"><span id="currentPage">1</span>/5</span>
                 </div>
             </div>
         </form>
@@ -395,11 +404,10 @@ $title = "CSU-NVB - Remise de garde";
                 <div class="col-sm-12" style="background-color: #b3e7ff">
                     <?php echo
                         '<hr>'
-                        . '<h4>' . '<a href="index.php?action=detailedShiftEnd&Remise='.$Ligne['Remise'].'">'
-                        . $Ligne['info1']
-                        . '</a> </h4>'
-                        . 'Responsable du jour : ' . $Ligne['info4'] . '<br>'
-                        . 'Responsable de nuit : ' . $Ligne['info5']
+                        . '<h4>' . '<a href="index.php?action=detailedShiftEnd&ID=' . $Ligne['info1'] . '">'
+                        . date("d-m-Y",strtotime($Ligne['info1'])) . '</a> </h4>' . '<input type="button" style=";position: absolute;right: 10px;top: 30px;" value="X" class="btn btn-danger">'
+                        . '<strong>' . 'Responsable du jour : ' . '</strong>' . $Ligne['info4'] . '<br>'
+                        . '<strong>' . 'Responsable de nuit : ' . '</strong>' . $Ligne['info5']
                         . '<br>'; ?>
                     <?php } ?>
                     <hr>

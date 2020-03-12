@@ -19,8 +19,16 @@ function shiftEndHomePage()
     }
 }
 
-function detailedShiftEnd(){
-    if (checkLoggedIn() == true) {
+function detailedShiftEnd()
+{
+    if (checkLoggedIn() == true) { // TODO : utiliser la fonction readShiftEndItem($id)
+        $Remises = readShiftEndItems();
+        foreach ($Remises['Remise'] as $Ligne) { // rechercher la bonne remise
+            if ($Ligne['info1'] == $_GET['ID']) {
+                $shiftEnd = $Ligne;
+                break;
+            }
+        }
         require_once 'view/detailedShiftEnd.php';
     } else {
         require_once 'view/login.php';
@@ -98,7 +106,6 @@ function addRemise()
     $_GET['action'] = "shiftendHome";
     require_once 'view/shiftEndHome.php';
 }
-
 
 
 ?>

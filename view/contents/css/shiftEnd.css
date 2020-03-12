@@ -57,16 +57,41 @@
     outline: none;
 }
 
-#prev:disabled, #next:disabled{
-    background-color: #4b4b4b;
+.BottomShiftEnd{
+    height: 37px;
+}
+
+#cancel{
+    float: left;
+}
+
+#prev, #next, #firstPage, #lastPage{
+    padding-top: 0;
+    position: relative;
+    bottom: 48%;
+    background-color: rgba(99, 138, 166, 0);
+    outline: none;
+    border: none;
+    height: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#prev:hover, #next:hover, #firstPage:hover, #lastPage:hover{
+    color: white;
+}
+
+#prev:disabled, #next:disabled, #firstPage:disabled, #lastPage:disabled{
+    cursor: default;
+    color: rgba(0, 0, 0, 0.15);
+}
+
+.nbrPage{
+    position: relative;
+    bottom: 60%;
 }
 
 #finish{
     float: right;
-}
-
-#verifMessage{
-    float: right;
-    margin-top: 7px;
-    color: #95d3f1;
 }

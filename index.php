@@ -2,10 +2,11 @@
 /**
  * CSUNVB - index.php
  *
- * Modified by: Fardel Bastien
+ * Modified by:
  * Initial modification made on: 06.02.2020 15:05
  * Current version: 1.0
  */
+
 session_start();
 
 // Include all controllers
