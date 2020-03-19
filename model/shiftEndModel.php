@@ -27,11 +27,13 @@ function readShiftEndItem($id)
     // TODO: coder la recherche de l'item demandé
     return $items;
 }
+
 function getShiftEndItem($id){
-    $json = readShiftEndItems();
-    foreach ($json as $item) {
+    $json = readShiftEndItems();{
+        foreach ($json['Remise'] as $item)
         if($id == $item['info1']){
-            $truc = "salut";
+
+            $truc = $item['info1'];
            return $truc;
         }
 
@@ -64,12 +66,14 @@ function updateShiftEndItem($item)
  * Détruit un item précis, identifié par son id
  * ...
  */
-function destroyShiftEndItem($id)
+function destroyShiftEndItem($date)
 {
-    $items = getShiftEndItems($id);
+    $id = $date;
+    $items = getShiftEndItem($id);
+
     echo $items;
+    unset($items);
     // TODO: coder la recherche de l'item demandé et sa destruction dans le tableau
-    saveShiftEndItem($items);
 }
 
 /**

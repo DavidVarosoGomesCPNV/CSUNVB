@@ -59,7 +59,7 @@ if (isset($_GET['action'])) {
             addRemise();
             break;
         case 'removeRemise':
-            removeRemise( );
+            removeRemise();
             break;
         default: // unknown action
             require_once 'view/login.php';
