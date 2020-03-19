@@ -17,20 +17,13 @@ $title = "CSU-NVB - Remise de garde";
 </head>
 <br>
 <div>
-    <h1>Remise de garde du <?= date("d.m.Y", strtotime($shiftEnd['info1'])) ?></h1>
-</div>
-<div style="background-color: #3e3d3b;padding: 15px">
-    <a href="index.php?action=updateShiftEnd&ID=<?= $shiftEnd['info1']?>"><input type="button" value="Modifier"  class="btn colorButton" style="background-color: #29b44a;color: white;outline: none;padding: 7px;width: 100px"></a>
-    <input type="button" value="Retirer" class="btn colorButton" style="background-color: #b44245;color: white;outline: none;padding: 7px;width: 100px">
-    <input type="button" value="PDF" class="btn colorButton" style="background-color: #4461b4;color: white;outline: none;padding: 7px;width: 100px">
+    <h1>Modification de la remise de garde du <?= date("d.m.Y", strtotime($shiftEnd['info1'])) ?></h1>
 </div>
 <br>
 <div>
     <div class="container-fluid" >
         <div class="row">
             <div class="col-sm-12" style="background-color: #a1c9e0">
-                <h2><?= date("d.m.Y", strtotime($shiftEnd['info1'])) ?></h2>
-                <hr>
                 <div class="row">
                     <div class="col-sm-6">
                         Équipages du jour : <?= $shiftEnd['info2'] ?><br>
@@ -172,8 +165,8 @@ $title = "CSU-NVB - Remise de garde";
         </tr>
 
 
-    </tbody>
-</table>
+        </tbody>
+    </table>
 </div>
 <br><br>
 

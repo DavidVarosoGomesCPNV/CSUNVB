@@ -35,6 +35,21 @@ function detailedShiftEnd()
     }
 }
 
+function updateShiftEnd()
+{
+    if (checkLoggedIn() == true) { // TODO : utiliser la fonction readShiftEndItem($id)
+        $Remises = readShiftEndItems();
+        foreach ($Remises['Remise'] as $Ligne) { // rechercher la bonne remise
+            if ($Ligne['info1'] == $_GET['ID']) {
+                $shiftEnd = $Ligne;
+                break;
+            }
+        }
+        require_once 'view/updateShiftend.php';
+    } else {
+        require_once 'view/login.php';
+    }
+}
 
 /**
  * Fonction qui test le fichier json avec insertion d'une remise
@@ -107,5 +122,10 @@ function addRemise()
     require_once 'view/shiftEndHome.php';
 }
 
+function removeRemise()
+{
+    destroyShiftEndItem($_GET['ID']);
+    require 'view/shiftEndHome.php';
+}
 
 ?>

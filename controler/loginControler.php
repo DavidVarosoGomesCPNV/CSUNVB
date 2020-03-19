@@ -19,14 +19,16 @@ function loginCheck()
         $password = $_POST['pass'];
 
         if (databaseLoginCheck($email, $password) == true) { //The email and password are correct, proceed to home page
-            if ($_SESSION['new'] == 'yes') {
-                $_GET['action'] = "newUser";
+            if (isset($_SESSION['new'])) {
+                if ($_SESSION['new'] == 'yes') {
+                    $_GET['action'] = "newUser";
 
-                require_once 'view/newUser.php';
-            } else {
-                $_GET['action'] = "home";
+                    require_once 'view/newUser.php';
+                } else {
+                    $_GET['action'] = "home";
 
-                require_once 'view/home.php';
+                    require_once 'view/home.php';
+                }
             }
         } else { //The email and password are incorrect, proceed to alert the user and reload the page
             echo '<script> alert ("Email ou mot de passe incorrect") </script>';

@@ -40,7 +40,7 @@ function databaseLoginCheck($email, $password)
 
     //Checks each users in the JSON file
     foreach ($usersArray as $row) {
-        if ($row['email'] == $email) { //If the email is correct, catch the hashed password and compare it with the given password
+        if ($row['email'] === $email) { //If the email is correct, catch the hashed password and compare it with the given password
             $accountHash = $row['password'];
             if (password_verify($password, $accountHash)) {
                 $_SESSION['email'] = $row['email'];

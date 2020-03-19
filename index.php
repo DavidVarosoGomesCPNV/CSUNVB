@@ -31,6 +31,9 @@ if (isset($_GET['action'])) {
         case 'detailedShiftEnd':
             detailedShiftEnd();
             break;
+        case 'updateShiftEnd':
+            updateShiftEnd();
+            break;
         case 'logout':
             logout();
             break;
@@ -54,6 +57,9 @@ if (isset($_GET['action'])) {
             break;
         case 'addRemise':
             addRemise();
+            break;
+        case 'removeRemise':
+            removeRemise( );
             break;
         default: // unknown action
             require_once 'view/login.php';

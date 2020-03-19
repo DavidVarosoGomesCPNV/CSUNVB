@@ -10,8 +10,9 @@
 require "model/newUserModel.php";
 
 /**
- * function checks if new password and confirm password are correct, then it calls the model to register the new password, otherwise he asks the user to do it again
+ * function checks if new password and confirm password are correct, then it calls the model to register the new password, otherwise he asks the user to do it again, also in case of an unknown access to the page, the mail will be set to "Erreur" in order to inform the user that there was an unauthorised access to the page.
  *
+ * @return bool
  */
 function newUser()
 {
@@ -21,14 +22,12 @@ function newUser()
             $newPwd = password_hash($_POST['newPass'], PASSWORD_DEFAULT);
 
             if (password_verify($confirm, $newPwd)) {
-                databasePasswordChange($newPwd, $_SESSION['email']);
-                session_destroy();
                 $_GET['action'] = 'login';
 
                 require_once 'view/login.php';
+                return true;
             } else {
-                echo '<script> alert("Les mots de passe ne correspondent pas !") </script>';
-                require_once "view/newUser.php";
+                return false;
             }
         }
     }

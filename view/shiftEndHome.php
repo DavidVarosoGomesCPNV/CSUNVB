@@ -21,7 +21,7 @@ $title = "CSU-NVB - Remise de garde";
 </div>
 <div>
     <div id="ShiftEndDivButton">
-        <a class="btn btn-primary btn-small m-1" style="color: white" onclick="ShiftEndAdd()">+</a>
+        <a class="btn btn-primary btn-small m-1" style="color: white;cursor: pointer" onclick="ShiftEndAdd()">+</a>
         Nouvelle remise
     </div>
     <div id="ShiftEndAdd" class="row banner">
@@ -381,10 +381,10 @@ $title = "CSU-NVB - Remise de garde";
                     <input type="button" class="btn colorButton" id="cancel" value="Annuler" onclick="ShiftEndAdd()">
                     <input type="submit" class="btn colorButton" id="finish" value="Terminer">
 
-                    <input type="button" value="‹‹" onclick="" id="firstPage" disabled>
+                    <input type="button" value="‹‹" onclick="toFirstPage()" id="firstPage" disabled>
                     <input type="button" value="‹" onclick="PreviousAdd()" id="prev" disabled>
                     <input type="button" value="›" onclick="NextAdd()" id="next">
-                    <input type="button" value="››" onclick="" id="lastPage">
+                    <input type="button" value="››" onclick="toLastPage()" id="lastPage">
 
 
                     <span style="color: white" class="nbrPage"><span id="currentPage">1</span>/5</span>
@@ -405,7 +405,7 @@ $title = "CSU-NVB - Remise de garde";
                     <?php echo
                         '<hr>'
                         . '<h4>' . '<a href="index.php?action=detailedShiftEnd&ID=' . $Ligne['info1'] . '">'
-                        . date("d-m-Y",strtotime($Ligne['info1'])) . '</a> </h4>' . '<input type="button" style=";position: absolute;right: 10px;top: 30px;" value="X" class="btn btn-danger">'
+                        . date("d-m-Y",strtotime($Ligne['info1'])) . '</h4>' . '<a href="index.php?action=removeRemise&ID=' . $Ligne['info1'] . '"><input type="button" style=";position: absolute;right: 10px;top: 30px;" value="Retirer" class="btn btn-danger"></a>'
                         . '<strong>' . 'Responsable du jour : ' . '</strong>' . $Ligne['info4'] . '<br>'
                         . '<strong>' . 'Responsable de nuit : ' . '</strong>' . $Ligne['info5']
                         . '<br>'; ?>
@@ -415,7 +415,7 @@ $title = "CSU-NVB - Remise de garde";
             </div>
         </div>
     </div>
-
+</div>
 
     <?php
     $content = ob_get_clean();

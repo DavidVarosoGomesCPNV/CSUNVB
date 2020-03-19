@@ -27,6 +27,17 @@ function readShiftEndItem($id)
     // TODO: coder la recherche de l'item demandé
     return $items;
 }
+function getShiftEndItem($id){
+    $json = readShiftEndItems();
+    foreach ($json as $item) {
+        if($id == $item['info1']){
+            $truc = "salut";
+           return $truc;
+        }
+
+    }
+
+}
 
 /**
  * Sauve l'ensemble des items dans le fichier json
@@ -55,7 +66,8 @@ function updateShiftEndItem($item)
  */
 function destroyShiftEndItem($id)
 {
-    $items = getShiftEndItems();
+    $items = getShiftEndItems($id);
+    echo $items;
     // TODO: coder la recherche de l'item demandé et sa destruction dans le tableau
     saveShiftEndItem($items);
 }
