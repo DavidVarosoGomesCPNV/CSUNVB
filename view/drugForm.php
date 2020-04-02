@@ -77,11 +77,14 @@ $title = "CSU-NVB - Stupéfiants";
                     <OPTION>Sainte-Croix
                     <OPTION>Yverdon
                 </select>
-
             </th>
-            <th colspan="4"><?php $date1 = date('Y-m-d'); // Date du jour
-                setlocale(LC_TIME, "fr_FR", "French");
-                echo strftime("%A, %d %B %G", strtotime($date1)); ?></th>
+            <th> <button type="button" id="Bouton<"> < </button> </th>
+            <th colspan="2"><input readonly name = "date1" value = "<?= date('Y-m-d'); ?>">
+                <?php $date1 = date('Y-m-d'); // Date du jour
+                // setlocale(LC_TIME, "fr_FR", "French");
+                // echo strftime("%A, %d %B %G", strtotime($date1));
+                ?> </th>
+            <th> <button type="button" id="Bouton+"> > </button> </th>
         </tr>
         <tr>
             <td>---</td>

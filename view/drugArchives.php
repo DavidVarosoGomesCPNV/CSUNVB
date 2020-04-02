@@ -57,14 +57,30 @@ $title = "CSU-NVB - Stupéfiants";
 $path = file_get_contents("model/dataStorage/dataDrugs.json");
 $tempArray = json_decode($path,true);
 
-var_dump($tempArray);
+
 
 
 ?>
 
-
+<body>
+Site : <?php echo $tempArray ["Site"]; ?><br>
+Date : <?php echo $tempArray ["Date"]; ?><br>
+Vehicule 1 Morphine : <?php echo $tempArray ["Vehicule_1_Morphine"]; ?><br>
+Vehicule 2 Morphine : <?php echo $tempArray ["Vehicule_2_Morphine"]; ?><br>
+Valeur de depart VHC1 Morphine":  <?php echo $tempArray ["Valeur_de_depart VHC1__Morphine"]; ?><br>
+Valeur_de_depart VHC2 Morphine":  <?php echo $tempArray ["Valeur_de_depart VHC2__Morphine"]; ?><br><br><br>
 
 </body>
+
+
+
+<?php
+foreach ($tempArray as $item){
+echo $item;
+echo "<br>";
+}
+?>
+
 </html>
 
 
