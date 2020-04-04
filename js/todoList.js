@@ -1,7 +1,23 @@
 /**
- * Le fichier todoList.js contient les fonctionnalités javascript qui ne sont utilisées que pour la gestion des tâches
- *
- * Ce cartouche vaudra quelques points en moins au groupe qui osera le laisser là tel quel ...
- * Auteur: X. Carrel
- * Date: Février 2020
+ * Auteur : Valentin Zingg & Gwenael west
  **/
+
+function toggleedit()
+{
+    //désactive our réactive l'édition de la todolist en cours.
+    var inputs=document.getElementsByTagName('input');
+    var boutonedit = document.getElementById("edit");
+    for(i=0;i<inputs.length;i++){
+        if(inputs[i].style.visibility === "hidden")
+        {
+            inputs[i].style.visibility = "visible";
+            boutonedit.innerHTML = "Arrêter la modification"
+        }
+        else
+        {
+            inputs[i].style.visibility= "hidden";
+            boutonedit.innerHTML = "Modifier la liste"
+        }
+
+    }
+}
