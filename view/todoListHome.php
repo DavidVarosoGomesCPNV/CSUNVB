@@ -7,6 +7,8 @@
 include_once 'model/todoListModel.php';
 ob_start();
 $title = "CSU-NVB - Tâches hebdomadaires";
+
+$cloture = false; //si la liste est cloturée
 ?>
 
 <form class="container">
@@ -17,28 +19,28 @@ $title = "CSU-NVB - Tâches hebdomadaires";
     <div class="row m-2">
         <h2>Tâches pour aujourd'hui : </h2>
         <?php
-            echo(date("D M Y"));
+            echo(date("D d M Y"));
         ?>
     </div>
     <hr>
     <div class="row m-2">
         <a class='btn btn-primary' id="edit" onclick="toggleedit()">Arrêter la modification</a>
     </div>
-    <form action="../model/savejson.php" method="get">
+    <form action="../model/savejson.php" method="post">
         <div class="row col-m">
             <?php
             $tododata = readTodoListItems();
             $marker = 0; //traque le numéro de la tache
-            foreach($tododata as $truc)
+            foreach($tododata as $element)
             {
                 $marker++;
                 echo("<div class='tache'>");
                 echo("<br>");
-                echo("<h2>".$truc["description"]."</h2>");
-                echo("Base : ".$truc["base"]."<br>");
+                echo("<h2>".$element["description"]."</h2>");
+                echo("Base : ".$element["base"]."<br>");
 
                 //Job de nuit
-                if($truc["nightjob"] != 0)
+                if($element["nightjob"] != 0)
                 {
                     echo("<br> "." Job de nuit : Oui"."<br>");
                 }
@@ -46,21 +48,21 @@ $title = "CSU-NVB - Tâches hebdomadaires";
                 {
                     echo("<br>  Job de nuit : Non"."<br>");
                 }
-                echo("<br> Date : ".$truc["date"]."<br>");
+                echo("<br> Date : ".$element["date"]."<br>");
 
                 //si la tâche n'est pas quittancée, affiche "personne" au lieu d'un blanc
-                if($truc["acknowledged_by"] == null)echo("<br> Quittancé par : Personne<br>");
-                else echo("<br> Quittancé par : <strong>".$truc["acknowledged_by"]."</strong><br>");
+                if($element["acknowledged_by"] == null)echo("<br> Quittancé par : Personne<br>");
+                else echo("<br> Quittancé par : <strong>".$element["acknowledged_by"]."</strong><br>");
 
                 echo("<hr>");
                 //Quel type d'input
-                if($truc["type"] == 0) //checkbox
+                if($element["type"] == 0) //checkbox
                 {
                     //si la case est décochée
-                    if($truc["value"] == null)
+                    if($element["value"] == null)
                     {
                         //empèche la modification si l'utilisateur connecté n'est pas celui qui l'a quittancé
-                        if($truc["acknowledged_by"] != null && $_SESSION["user"] != $truc["acknowledged_by"])
+                        if($element["acknowledged_by"] != null && $_SESSION["user"] != $element["acknowledged_by"])
                         {
                             echo("<input type='checkbox'"." disabled name='"."checkbox$marker"."' >");
                         }
@@ -73,7 +75,7 @@ $title = "CSU-NVB - Tâches hebdomadaires";
                     else
                     {
                         //empèche la modification si l'utilisateur connecté n'est pas celui qui l'a quittancé
-                        if($truc["acknowledged_by"] != null && $_SESSION["user"] != $truc["acknowledged_by"])
+                        if($element["acknowledged_by"] != null && $_SESSION["user"] != $element["acknowledged_by"])
                         {
                             echo("<input type='checkbox' disabled name='"."checkbox$marker"." value='true' >");
                         }
@@ -87,10 +89,10 @@ $title = "CSU-NVB - Tâches hebdomadaires";
                 else//texte
                 {
                     //si il n'y a aucun texte entré
-                    if($truc["value"] == null)
+                    if($element["value"] == null)
                     {
                         //empèche la modification si l'utilisateur connecté n'est pas celui qui l'a quittancé
-                        if($truc["acknowledged_by"] != null && $_SESSION["user"] != $truc["acknowledged_by"])
+                        if($element["acknowledged_by"] != null && $_SESSION["user"] != $element["acknowledged_by"])
                         {
                             echo("<input disabled type='text' >");
                         }
@@ -103,13 +105,13 @@ $title = "CSU-NVB - Tâches hebdomadaires";
                     else
                     {
                         //empèche la modification si l'utilisateur connecté n'est pas celui qui l'a quittancé
-                        if($truc["acknowledged_by"] != null && $_SESSION["user"] != $truc["acknowledged_by"])
+                        if($element["acknowledged_by"] != null && $_SESSION["user"] != $element["acknowledged_by"])
                         {
-                            echo("<input type='text' disabled value= ".$truc['value'].">");
+                            echo("<input type='text' disabled value= ".$element['value'].">");
                         }
                         else
                         {
-                            echo("<input type='text'  value= ".$truc['value'].">");
+                            echo("<input type='text'  value= ".$element['value'].">");
                         }
                     }
                 }

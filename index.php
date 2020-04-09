@@ -28,6 +28,7 @@ if(isset($_GET['action'])){
         case 'drugs':
             drugHomePage();
             break;
+
         default: // unknown action
             require_once 'view/home.php';
             break;
