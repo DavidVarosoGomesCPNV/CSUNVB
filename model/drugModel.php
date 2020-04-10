@@ -12,8 +12,13 @@ function cloturer()
     if (isset($_POST['cloturer'])) { // si formulaire soumis
 
         $date = @$_POST['date1'];
+        $site =@$_POST['Site'];
 
-        $JsonFile = fopen("model/dataStorage/dataDrugs-$date.json", "a");
+        if ($site == "La Valée-de-Joux"){
+            $site = "VDJ";
+        }
+
+        $JsonFile = fopen("model/dataStorage/$site/dataDrugs-$date.json", "w");
         // $JsonEmpty = file_get_contents("model/dataStorage/dataDrugs-$date.json");
 
         if ($JsonFile == ""){

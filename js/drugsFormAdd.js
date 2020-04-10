@@ -29,11 +29,11 @@ function AddInputMorph() {
 
     // Insertion des input pour toutes les cases du tableau
         var input = document.createElement("input");
-    cell1.innerHTML = '<input type="text" name="morphineValue' + nextVa3_1 + '" />';
-    cell2.innerHTML = '<input type="text" name="pharma_MValue' + nextVal3_2 + '" />';
-    cell3.innerHTML = '<input type="text" name="VHC1_MorphineUsed' + nextVal3_3 + '" />';
-    cell4.innerHTML = '<input type="text" name="VHC2_MorphineUsed' + nextVal3_4 + '" />';
-    cell5.innerHTML = '<input type="text" name="pharma2_MValue' + nextVal3_5 + '" />';
+    cell1.innerHTML = '<input type="number" name="morphineValue' + nextVa3_1 + '" />';
+    cell2.innerHTML = '<input type="number" name="pharma_MValue' + nextVal3_2 + '" />';
+    cell3.innerHTML = '<input type="number" name="VHC1_MorphineUsed' + nextVal3_3 + '" />';
+    cell4.innerHTML = '<input type="number" name="VHC2_MorphineUsed' + nextVal3_4 + '" />';
+    cell5.innerHTML = '<input type="number" name="pharma2_MValue' + nextVal3_5 + '" />';
     document.body.appendChild(input);
     MorphEnCours++;
 
@@ -64,11 +64,11 @@ function AddInputFernyl() {
     } else
 
         var input = document.createElement("input");
-    cell1.innerHTML = '<input type="text" name="fernylValue' + nextVa3_1 + '" />';
-    cell2.innerHTML = '<input type="text" name="pharma_FValue' + nextVal3_2 + '" />';
-    cell3.innerHTML = '<input type="text" name="VHC1_FernylUsed' + nextVal3_3 + '" />';
-    cell4.innerHTML = '<input type="text" name="VHC2_FernylUsed' + nextVal3_4 + '" />';
-    cell5.innerHTML = '<input type="text" name="pharma2_FValue' + nextVal3_5 + '" />';
+    cell1.innerHTML = '<input type="number" name="fernylValue' + nextVa3_1 + '" />';
+    cell2.innerHTML = '<input type="number" name="pharma_FValue' + nextVal3_2 + '" />';
+    cell3.innerHTML = '<input type="number" name="VHC1_FernylUsed' + nextVal3_3 + '" />';
+    cell4.innerHTML = '<input type="number" name="VHC2_FernylUsed' + nextVal3_4 + '" />';
+    cell5.innerHTML = '<input type="number" name="pharma2_FValue' + nextVal3_5 + '" />';
     document.body.appendChild(input);
     FernylEnCours++;
 

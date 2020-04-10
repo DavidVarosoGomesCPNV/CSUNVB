@@ -135,19 +135,19 @@ $title = "CSU-NVB - Stupéfiants";
         </tr>
 
         <tr>
-            <td><input name="morphineValue2" type="text"></td>
-            <td><input name="pharma_MValue2" type="text"></td>
-            <td><input name="VHC1_MorphineUsed1" type="text"></td>
-            <td><input name="VHC2_MorphineUsed2" type="text"></td>
-            <td><input name="pharma2_MValue2" type="text"></td>
+            <td><input name="morphineValue2" type="number"></td>
+            <td><input name="pharma_MValue2" type="number"></td>
+            <td><input name="VHC1_MorphineUsed1" type="number"></td>
+            <td><input name="VHC2_MorphineUsed2" type="number"></td>
+            <td><input name="pharma2_MValue2" type="number"></td>
         </tr>
 
         <tr>
-            <td><input name="morphineValue1" type="text"></td>
-            <td><input name="pharma_MValue1" type="text"></td>
-            <td><input name="VHC1_MorphineUsed1" type="text"></td>
-            <td><input name="VHC2_MorphineUsed2" type="text"></td>
-            <td><input name="pharma2_MValue1" type="text"></td>
+            <td><input name="morphineValue1" type="number"></td>
+            <td><input name="pharma_MValue1" type="number"></td>
+            <td><input name="VHC1_MorphineUsed1" type="number"></td>
+            <td><input name="VHC2_MorphineUsed2" type="number"></td>
+            <td><input name="pharma2_MValue1" type="number"></td>
         </tr>
 
 
@@ -201,19 +201,19 @@ $title = "CSU-NVB - Stupéfiants";
         </tr>
 
         <tr>
-            <td><input name="fernylValue2" type="text"></td>
-            <td><input name="pharma_FValue2" type="text"></td>
-            <td><input name="VHC1_FernylUsed1" type="text"></td>
-            <td><input name="VHC2_FernylUsed2" type="text"></td>
-            <td><input name="pharma2_FValue2" type="text"></td>
+            <td><input name="fernylValue2" type="number"></td>
+            <td><input name="pharma_FValue2" type="number"></td>
+            <td><input name="VHC1_FernylUsed1" type="number"></td>
+            <td><input name="VHC2_FernylUsed2" type="number"></td>
+            <td><input name="pharma2_FValue2" type="number"></td>
         </tr>
 
         <tr>
-            <td><input name="fernylValue1" type="text"></td>
-            <td><input name="pharma_FValue1" type="text"></td>
-            <td><input name="VHC1_FernylUsed1" type="text"></td>
-            <td><input name="VHC2_FernylUsed2" type="text"></td>
-            <td><input name="pharma2_FValue1" type="text"></td>
+            <td><input name="fernylValue1" type="number"></td>
+            <td><input name="pharma_FValue1" type="number"></td>
+            <td><input name="VHC1_FernylUsed1" type="number"></td>
+            <td><input name="VHC2_FernylUsed2" type="number"></td>
+            <td><input name="pharma2_FValue1" type="number"></td>
         </tr>
 
         <!-- TEMESTA -->
