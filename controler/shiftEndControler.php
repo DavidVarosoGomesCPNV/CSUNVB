@@ -61,7 +61,7 @@ function addRemise()
     $Remises = readShiftEndItems();
     $id = 0;
     foreach ($Remises['Remise'] as $element){
-        if($id < $element['id']){
+        if($id <= $element['id']){
             $id = $element['id'];
             echo "avant id++: <br>";
             echo $id ."<br>";
