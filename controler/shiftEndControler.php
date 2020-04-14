@@ -59,10 +59,22 @@ function addRemise()
 
     //lecture du json
     $Remises = readShiftEndItems();
+    $id = 0;
+    foreach ($Remises['Remise'] as $element){
+        if($id < $element['id']){
+            $id = $element['id'];
+            echo "avant id++: <br>";
+            echo $id ."<br>";
+            $id++;
+            echo "après id++:<br>";
+            echo $id ."<br>";
+        }
+    }
 
     //création d'une ligne de remise
     $ligne = array
     (
+        'id' => $id,
         'info1' => $_POST['info1'],
         'info2' => $_POST['info2'],
         'info3' => $_POST['info3'],
