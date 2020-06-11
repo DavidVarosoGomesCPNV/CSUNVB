@@ -12,6 +12,7 @@
     "password": "$2y$10$UNTRPR75zYLI3zl1tcxXyuTCILQgOi6IXtlcUIn4jAo76OgXp3VuK",
     "user": "Kevin Gacon",
     "sector": "Sainte-Croix",
+    "sector": "Yverdon",
     "admin": "no",
     "new": "no"
   },
@@ -22,5 +23,6 @@
     "sector": "Sainte-Croix",
     "admin": "no",
     "new": "yes"
+    "new": "no"
   }
 ]

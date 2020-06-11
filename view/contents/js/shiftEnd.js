@@ -23,12 +23,17 @@ function ShiftEndAdd() {
 function PreviousAdd(){
     var prev = document.getElementById("prev");
     var next = document.getElementById("next");
+
+    var firstPage =document.getElementById("firstPage");
+    var lastPage =document.getElementById("lastPage");
+
     var first = document.getElementById("first");
     var tableMaterielTelecom = document.getElementById("tableMaterielTelecom");
     var tableVehiculeIntervention = document.getElementById("tableVehiculeIntervention");
     var tableEcranDeCom = document.getElementById("tableEcranDeCom");
     var tableCentraleTache = document.getElementById("tableCentraleTache");
     var currentPage = document.getElementById("currentPage");
+
 
     if (verifPrevNext > 1){
         verifPrevNext--;
@@ -37,6 +42,7 @@ function PreviousAdd(){
     switch (verifPrevNext){
         case 1:
             prev.disabled = true;
+            firstPage.disabled = true;
             first.style.display = "block";
             tableMaterielTelecom.style.display = "none";
             currentPage.innerHTML = verifPrevNext;
@@ -53,6 +59,7 @@ function PreviousAdd(){
             break;
         case 4:
             next.disabled = false;
+            lastPage.disabled = false;
             tableEcranDeCom.style.display = "block";
             tableCentraleTache.style.display = "none";
             currentPage.innerHTML = verifPrevNext;
@@ -65,6 +72,10 @@ function PreviousAdd(){
 function NextAdd(){
     var prev = document.getElementById("prev");
     var next = document.getElementById("next");
+
+    var firstPage =document.getElementById("firstPage");
+    var lastPage =document.getElementById("lastPage");
+
     var first = document.getElementById("first");
     var tableMaterielTelecom = document.getElementById("tableMaterielTelecom");
     var tableVehiculeIntervention = document.getElementById("tableVehiculeIntervention");
@@ -79,6 +90,7 @@ function NextAdd(){
     switch (verifPrevNext){
         case 2:
             prev.disabled = false;
+            firstPage.disabled = false;
             first.style.display = "none";
             tableMaterielTelecom.style.display = "block";
             currentPage.innerHTML = verifPrevNext;
@@ -95,6 +107,7 @@ function NextAdd(){
             break;
         case 5:
             next.disabled = true;
+            lastPage.disabled = true;
             tableEcranDeCom.style.display = "none";
             tableCentraleTache.style.display = "block";
             currentPage.innerHTML = verifPrevNext;
@@ -102,4 +115,62 @@ function NextAdd(){
         default:
             verifPrevNext = 5;
     }
+}
+
+function toFirstPage() {
+    var prev = document.getElementById("prev");
+    var next = document.getElementById("next");
+
+    var firstPage =document.getElementById("firstPage");
+    var lastPage =document.getElementById("lastPage");
+
+    var first = document.getElementById("first");
+    var tableMaterielTelecom = document.getElementById("tableMaterielTelecom");
+    var tableVehiculeIntervention = document.getElementById("tableVehiculeIntervention");
+    var tableEcranDeCom = document.getElementById("tableEcranDeCom");
+    var tableCentraleTache = document.getElementById("tableCentraleTache");
+
+    verifPrevNext = 1;
+    next.disabled = false;
+    prev.disabled = true;
+
+    firstPage.disabled = true;
+    lastPage.disabled = false;
+
+    first.style.display = "block";
+    tableMaterielTelecom.style.display = "none";
+    tableVehiculeIntervention.style.display = "none";
+    tableEcranDeCom.style.display = "none";
+    tableCentraleTache.style.display = "none";
+    currentPage.innerHTML = verifPrevNext;
+
+}
+
+function toLastPage() {
+    var prev = document.getElementById("prev");
+    var next = document.getElementById("next");
+
+    var firstPage =document.getElementById("firstPage");
+    var lastPage =document.getElementById("lastPage");
+
+    var first = document.getElementById("first");
+    var tableMaterielTelecom = document.getElementById("tableMaterielTelecom");
+    var tableVehiculeIntervention = document.getElementById("tableVehiculeIntervention");
+    var tableEcranDeCom = document.getElementById("tableEcranDeCom");
+    var tableCentraleTache = document.getElementById("tableCentraleTache");
+
+    verifPrevNext = 5;
+    next.disabled = true;
+    prev.disabled = false;
+
+    firstPage.disabled = false;
+    lastPage.disabled = true;
+
+    first.style.display = "none";
+    tableMaterielTelecom.style.display = "none";
+    tableVehiculeIntervention.style.display = "none";
+    tableEcranDeCom.style.display = "none";
+    tableCentraleTache.style.display = "block";
+    currentPage.innerHTML = verifPrevNext;
+
 }
