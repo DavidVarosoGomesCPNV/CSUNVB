@@ -18,10 +18,11 @@ function newUser()
     if (isset($_POST['newPass'])) {
         if (isset($_POST['confirm'])) {
             $confirm = $_POST['confirm'];
-            $newPwd = password_hash($_POST['newPass'], PASSWORD_DEFAULT);
+            $newPsw = password_hash($_POST['newPass'], PASSWORD_DEFAULT);
 
-            if (password_verify($confirm, $newPwd)) {
-                databasePasswordChange($newPwd, $_SESSION['email']);
+            if (password_verify($confirm, $newPsw)) {
+                $_SESSION['newPsw'] = $newPsw;
+                databasePasswordChange();
                 session_destroy();
                 $_GET['action'] = 'login';
 

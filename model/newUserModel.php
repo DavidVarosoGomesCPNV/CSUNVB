@@ -10,12 +10,12 @@
 /**
  * function writes content in JSON file
  *
- * @param $changes
+ * @param $usersArray
  * @return false|string
  */
-function writeJSON($changes)
+function writeJSON($usersArray)
 {
-    $modifiedUsersArray = json_encode($changes);
+    $modifiedUsersArray = json_encode($usersArray);
 
     return $modifiedUsersArray;
 }
@@ -37,23 +37,23 @@ function getJSON()
 
 /**
  * function opens database (json file) and changes selected user's password while removing the "new" attribute (setting it to "no")
- *
- * @param $password
- * @param $email
  */
-function databasePasswordChange($password, $email)
+function databasePasswordChange()
 {
     $usersArray = getJSON();
+    $counter = 0;
 
     foreach ($usersArray as $row) {
-        if ($row['email'] == $email) {
-            $row['password'] = $password;
-            $row['new'] = 'no';
+        if ($row["email"] == $_SESSION['email']) {
+            $row["password"] = $_SESSION['newPsw'];
+            $row["new"] = "no";
         }
+        $counter++;
     }
 
-    $changes = $usersArray;
-    $modifiedUsersArray = writeJSON($changes);
+    $modifiedUsersArray = writeJSON($usersArray);
+
+    var_dump($modifiedUsersArray);
 
     file_put_contents("model/dataStorage/users.json", $modifiedUsersArray);
 }
